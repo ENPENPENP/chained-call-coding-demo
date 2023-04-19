@@ -9,7 +9,7 @@ import cn.elphen.demo.core.IBuilderBackReference;
 public class A_Configure<CB extends IBuilderBackReference<MergedConfigure, CB>>
         extends AbstractBuilderAdapter<MergedConfigure, CB> {
 
-    A_Configure<CB> doSomething() {
+    A_Configure<CB> configA() {
         System.out.println("this is configure for A");
         return this;
     }

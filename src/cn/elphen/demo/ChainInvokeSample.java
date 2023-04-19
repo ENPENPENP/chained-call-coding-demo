@@ -11,11 +11,15 @@ public class ChainInvokeSample {
 
     public static void test() {
         MergedConfigure configure = new MergedConfigureBuilder()
-                .withA()
-                .doSomething()
+                // return A_Configure
+                .A()
+                .configA()
+                // roll back to MergedConfigureBuilder
                 .and()
-                .withB()
-                .doSomething()
+                // return B_Configure
+                .B()
+                .configB()
+                // roll back to MergedConfigureBuilder
                 .and()
                 .build();
     }

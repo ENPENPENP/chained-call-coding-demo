@@ -14,11 +14,11 @@ public class MergedConfigureBuilder implements IBuilderBackReference<MergedConfi
         return new MergedConfigure();
     }
 
-    public A_Configure<MergedConfigureBuilder> withA() {
+    public A_Configure<MergedConfigureBuilder> A() {
         return getOrApply(new A_Configure<>());
     }
 
-    public B_Configure<MergedConfigureBuilder> withB() {
+    public B_Configure<MergedConfigureBuilder> B() {
         return getOrApply(new B_Configure<>());
     }
 
